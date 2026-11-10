@@ -1,85 +1,102 @@
-#import "/styles/percorso-computer.typ": *
+#import "/styles/percorso-computer.typ": richiamo
+#import "/styles/template.typ": grigio
 
-= Programmi, processi e applicazioni
+#set par(spacing: 1em)
+
+#let foto(nome, larghezza: 100%, altezza: 24mm, didascalia: none) = block(width: 100%, breakable: false)[
+  #align(center, image(
+    "/assets/immagini/5-software/" + nome + ".jpg",
+    width: larghezza, height: altezza, fit: "contain",
+  ))
+  #if didascalia != none [
+    #block(width: 100%, above: 4pt)[
+      #set par(justify: false)
+      #align(center, text(size: 9pt, fill: grigio, didascalia))
+    ]
+  ]
+]
+
+= Il comportamento di un computer
+
+Tutto ciò che in un computer è non fisico e non tangibile prende il nome di *software*. Il software dà al computer un comportamento e uno scopo ed è costituito dai programmi. In ogni computer distinguiamo la macchina fisica, l’*hardware*, dal programma che la macchina sta eseguendo, il *software*.
 
 #richiamo[
-
-*Idea chiave:* l'hardware è la macchina fisica; il *software* è l'insieme delle istruzioni che le permettono di svolgere compiti diversi.
-
-Lo stesso computer può essere usato per scrivere, comunicare, ascoltare musica o giocare perché esegue *programmi diversi*.
-
+  *I computer sono macchine universali.* La stessa macchina può svolgere compiti diversi seguendo istruzioni diverse. Con un programma scrive un testo, con un altro riproduce musica.
 ]
 
 == Il programma
 
-Un *programma* è un insieme organizzato di istruzioni che un computer esegue per svolgere un compito. Le istruzioni possono essere scritte in un *linguaggio di programmazione*; il testo prodotto dal programmatore viene chiamato *codice sorgente*.
+Un *programma* è un insieme di istruzioni, leggibili da un computer, per risolvere in maniera automatica un certo problema. I programmi si scrivono in un *linguaggio di programmazione*, pensato per esprimere istruzioni che il computer possa eseguire. *Programmare* significa scrivere il codice di un programma, chiamato *codice sorgente*.
 
-*Esempio: le regole di un gioco.* Quando viene premuta la freccia destra, il personaggio si sposta verso destra. Se incontra un ostacolo, perde una vita. Queste regole possono essere trasformate in istruzioni eseguibili.
+I programmi possono avere dimensioni molto diverse. I numeri qui sotto servono a dare un’idea dell’ordine di grandezza. Il conteggio delle righe dipende dalla versione e da quali parti del codice si includono.
 
-Un *programma* è il software disponibile per essere eseguito. Un *processo* è un programma durante la sua esecuzione. Si possono avere più processi contemporaneamente.
-
-== Software di base e applicativo
-
-#table(columns: (1fr, 1fr),
-  table.header([Software di base], [Software applicativo]),
-  [Permette al dispositivo di avviarsi e funzionare e fornisce servizi agli altri programmi], [Permette alle persone di svolgere attività concrete],
-  [Sistema operativo, firmware di avvio], [Word, browser, lettori musicali, videogiochi],
+#table(
+  columns: (1fr, 1fr, 1fr),
+  table.header([Windows 10], [GTA V], [Minecraft]),
+  [Circa 50 milioni di righe], [Circa 36 milioni di righe], [Circa 500 mila righe],
 )
 
-Il *sistema operativo (SO)* è uno dei principali software di base. Esempi: *Windows, macOS, Linux, Android e iOS*. Non è la stessa cosa di un'applicazione: il sistema operativo gestisce le risorse di cui le applicazioni hanno bisogno.
+== Software di base e software applicativo
 
-Un’istruzione deve indicare un’operazione eseguibile. Nel gioco, «se incontra un ostacolo perde una vita» collega una condizione a un effetto: il programma controlla la situazione e aggiorna il risultato. Il codice sorgente descrive queste regole; per eseguirle intervengono strumenti software che le rendono utilizzabili dal dispositivo.
+Il *software di base* serve a far funzionare il computer. Ne fanno parte il *BIOS/UEFI*, che interviene all’accensione, e il *sistema operativo*, che gestisce il computer e permette di eseguire le applicazioni.
 
-Il programma conservato nell’archiviazione e il processo attivo non sono la stessa cosa. Puoi avere un lettore musicale installato senza usarlo; quando lo avvii, il sistema mette a disposizione memoria e tempo di elaborazione. Chiudere un processo non significa disinstallare il programma.
+#grid(columns: (1.6fr, 1fr, 1fr), column-gutter: 7mm,
+  foto("windows", altezza: 15mm),
+  foto("linux", altezza: 15mm),
+  foto("android", altezza: 15mm),
+)
+
+Il *software applicativo* comprende i programmi che permettono di svolgere attività utili per gli utenti. Si usa per scrivere testi, mail e codice, ascoltare musica, giocare e persino per andare sulla Luna.
 
 #pagebreak()
 
-= Il sistema operativo gestisce le risorse
+= Il sistema operativo
 
-== Le funzioni del sistema operativo
+Il *sistema operativo* è il software di base che si frappone tra l’hardware e le applicazioni. Gestisce le risorse del computer e fornisce ai programmi gli strumenti per usarle.
 
-- *Esegue programmi* e permette di passare da un'attività all'altra (_multitasking_).
-- *Gestisce le risorse*: CPU, RAM, periferiche e spazio di archiviazione.
-- *Organizza file e cartelle* attraverso il _file system_.
-- *Gestisce utenti e permessi*, determinando chi può accedere a determinate risorse.
-- *Fornisce funzioni per la rete*, utili per comunicare con altri dispositivi.
+== Funzioni principali
+
+#table(
+  columns: (1fr, 2.5fr),
+  table.header([Funzione], [Come interviene il sistema operativo]),
+  [*Esegue le applicazioni*], [Quando avvii un programma, il sistema operativo crea e gestisce un *processo*. Può mantenere in esecuzione più programmi contemporaneamente. Questa capacità si chiama *multitasking*.],
+  [*Fa dialogare applicazioni e hardware*], [Le applicazioni possono chiedere al sistema operativo di svolgere un’operazione, ad esempio aprire un file. Queste richieste si chiamano *chiamate di sistema* (_system call_).],
+  [*Gestisce la memoria e i file*], [Assegna la RAM ai programmi in uso. Nella memoria secondaria permette di salvare e recuperare i dati attraverso il *file system*.],
+  [*Controlla gli accessi*], [Distingue gli *utenti* autorizzati ad accedere al sistema e usa i *permessi* per stabilire che cosa ciascuno può fare.],
+  [*Gestisce la rete*], [Permette al computer di scambiare dati con altri dispositivi. Il browser usa queste funzioni per navigare su Internet.],
+)
+
+== Il file system
+
+Il *file system* è il modo in cui il sistema operativo organizza i dati nella memoria secondaria. Il sistema operativo crea un’*astrazione*, cioè un modo di rappresentare la memoria attraverso *file e cartelle*. File e cartelle sono organizzati sotto forma di *albero*. Ciascuno è individuabile attraverso un *percorso*.
+
+#foto("albero-file", altezza: 74mm, didascalia: [Un albero di file e cartelle. Il percorso di `Grades` parte dall’unità `D:` e attraversa tre cartelle.])
+
+#align(center, text(size: 10pt)[`D:\My Documents\TEACHING\105\Grades`])
+
+#pagebreak()
+
+= Il software applicativo
+
+Il *software applicativo* serve all’utente per fare qualcosa di concreto. Il sistema operativo fornisce gli strumenti e il software applicativo li usa per realizzare un obiettivo, come scrivere un documento, navigare online, inviare messaggi o giocare.
+
+#grid(columns: (1fr, 1fr, 1fr, 1.5fr), column-gutter: 7mm,
+  foto("telegram", altezza: 19mm, didascalia: [Telegram]),
+  foto("gmail", altezza: 19mm, didascalia: [Gmail]),
+  foto("spotify", altezza: 19mm, didascalia: [Spotify]),
+  foto("minecraft", altezza: 19mm, didascalia: [Minecraft]),
+)
+
+== Come usa le risorse del computer
+
+Quando un’applicazione deve salvare un documento o inviare un messaggio, chiede al *sistema operativo* di accedere alla memoria secondaria o alla rete. Per esempio, Telegram gestisce la conversazione che vedi sullo schermo e usa i servizi di rete del sistema operativo per inviare i dati.
+
+== La scelta della piattaforma
+
+Un’applicazione installabile deve essere compatibile con il *sistema operativo* che la esegue. Lo stesso programma può essere preparato per più piattaforme. Per questo una pagina di download può presentare versioni diverse dello stesso programma.
+
+#foto("telegram-desktop", larghezza: 91%, altezza: 75mm, didascalia: [La pagina di Telegram Desktop mostra download distinti per Windows, macOS e Linux.])
 
 #richiamo[
-
-*Esempio:* quando si apre un documento, il sistema operativo aiuta a recuperarlo dal dispositivo di archiviazione, utilizza le risorse necessarie e permette al programma di mostrarlo. L'utente non deve conoscere tutti i dettagli del funzionamento dell'hardware.
-
+  Se usi un computer con macOS, scegli la versione per macOS. L’applicazione serve allo stesso scopo sulle diverse piattaforme, ma ogni versione usa i servizi del sistema operativo per cui è stata preparata.
 ]
-
-Il multitasking permette di mantenere attivi più processi. Il sistema operativo assegna loro risorse e alterna molte operazioni rapidamente; quando sono disponibili più core, alcuni lavori possono procedere anche in parallelo. Vedere più finestre aperte non significa che ogni programma possieda una CPU tutta per sé.
-
-Il file system consente al sistema di organizzare e ritrovare i dati nell’archiviazione. Quando salvi una relazione, l’applicazione richiede servizi al sistema operativo, che coordina l’operazione con il dispositivo. File e percorsi sono approfonditi nella dispensa separata: qui interessa capire chi rende possibili queste operazioni.
-
-Utenti e permessi stabiliscono quali risorse si possono usare. Un utente può leggere un materiale senza essere autorizzato a modificarlo: il programma disponibile e il permesso di eseguire un’azione sono due aspetti differenti.
-
-#schema("/assets/svg/hardware-software/strati-software.svg")
-
-#pagebreak()
-
-= Interfacce e compatibilità
-
-== Comunicare con i programmi
-
-L'*interfaccia utente* è l'insieme degli elementi attraverso cui si interagisce con il software: pulsanti, finestre, menu, icone, campi di testo e comandi vocali.
-
-Quando viene toccata un'icona, si tocca materialmente lo *schermo*, cioè l'hardware. Il dispositivo rileva il comando e il software esegue le istruzioni collegate.
-
-Un modo semplice per rappresentare il sistema è:
-
-*Utente → applicazione → sistema operativo → hardware*
-
-È uno schema semplificato: nella pratica le relazioni possono essere più articolate.
-
-== Programmi e compatibilità
-
-Alcune applicazioni sono disponibili in versioni differenti per Windows, macOS o Linux. Altre funzionano su più sistemi operativi. Le *applicazioni web* si utilizzano spesso attraverso un browser, senza installare una versione specifica per ogni sistema.
-
-*Esempio:* un documento può essere modificato in un'applicazione installata oppure in un'applicazione online. Lo scopo è simile, ma il modo in cui il programma viene utilizzato è diverso.
-
-Un’interfaccia non coincide con tutto il programma: è la parte attraverso cui comunichi con esso. Un pulsante visibile sullo schermo rappresenta un comando; il tocco viene rilevato dall’hardware e interpretato dal software. Anche una voce di menu, una scorciatoia da tastiera o un comando vocale possono richiamare una funzione.
-
-La compatibilità riguarda la possibilità di utilizzare correttamente un programma nel proprio ambiente. Prima di installarlo bisogna controllare il sistema operativo supportato e i requisiti hardware. Un’applicazione web riduce la necessità di una versione installata per ciascun sistema, ma richiede comunque un browser compatibile e, per molte funzioni, una connessione.
