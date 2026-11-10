@@ -96,7 +96,7 @@ Immaginiamo che la cartella *Documenti* dell’albero sia stata creata nell’un
 
 = Dove vengono salvati file e cartelle?
 
-- *Sul proprio computer:* i file vengono conservati nella memoria di archiviazione del computer utilizzato.
+- *Sul computer:* i file vengono conservati nella memoria di archiviazione del computer utilizzato.
 - *Nel cloud:* i file vengono conservati su altri computer, chiamati *server*, che possono trovarsi in diverse parti del mondo. Per raggiungerli ci si collega tramite *Internet*.
 
 == Stessa organizzazione, posto diverso
