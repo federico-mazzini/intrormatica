@@ -1,0 +1,8 @@
+/dist/
+/tmp/
+.DS_Store
+._*
+*.tmp
+*.swp
+*.swo
+*~
