@@ -5,8 +5,8 @@
   numerazione: "1.",
 )
 
-#include "teoria.typ"
+#include "3-1-bit-byte-dimensioni.typ"
 
 #set heading(numbering: none)
 #pagebreak()
-#include "esercizi.typ"
+#include "3-2-esercizi.typ"

@@ -1,12 +1,5 @@
 #import "/styles/template.typ": dispensa, arancione
 #import "/styles/didattica.typ": richiamo
-#show: dispensa.with(
-  titolo: "Inviare e condividere file",
-  sottotitolo: "Allegati, link, permessi e archivi ZIP: scegliere in base allo scopo.",
-  numerazione: "1.",
-  accento: arancione,
-  sfondo: rgb("#FFF4E9"),
-)
 
 // Tutta la teoria è in questo file; le domande sono nel file esercizi.
 #let esempio(body) = block(
@@ -122,6 +115,3 @@ Cartella su Drive → *Condividi* → scelgo le persone e i permessi → invio i
   *Da ricordare* \
   Non esiste un metodo sempre migliore. Prima considera *cosa deve fare chi riceve*, *se il materiale cambierà*, *quanti file sono e quanto pesano*. Poi scegli tra *allegato*, *ZIP* e *condivisione Drive*.
 ]
-
-#pagebreak()
-#include "inviare-condividere-esercizi.typ"

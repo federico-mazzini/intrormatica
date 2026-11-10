@@ -1,12 +1,5 @@
 #import "/styles/template.typ": dispensa, verde, grigio
 #import "/styles/didattica.typ": richiamo, diagramma
-#show: dispensa.with(
-  titolo: "File e cartelle",
-  sottotitolo: "Riconoscere i file, organizzare le cartelle e leggere i percorsi.",
-  numerazione: "1.",
-  accento: verde,
-  sfondo: rgb("#F0F7F2"),
-)
 
 = Che cos’è un file?
 
@@ -216,6 +209,3 @@ L’*estrazione* permette di tornare ad avere un insieme di file e cartelle a pa
 ]
 
 ]
-
-#pagebreak()
-#include "file-e-cartelle-esercizi.typ"

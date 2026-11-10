@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
-bash scripts/build.sh
-bash scripts/build-file-cartelle.sh
-bash scripts/build-inviare-condividere.sh
-mkdir -p pdf
-for nome in bit-byte-dimensioni file-cartelle inviare-condividere-file; do
-  cp "dist/${nome}.pdf" "pdf/${nome}.pdf"
+for argomento in \
+  1-file-cartelle \
+  2-inviare-condividere-file \
+  3-bit-byte-dimensioni \
+  4-introduzione-computer \
+  5-software \
+  6-hardware \
+  7-funzionamento-computer; do
+  bash scripts/build-one.sh "$argomento"
 done
