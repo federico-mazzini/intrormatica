@@ -23,21 +23,21 @@
 
 == Computer desktop e portatili
 
-#tipo([Computer desktop], "desktop.png")[
+#tipo([Computer desktop], "desktop.jpg")[
   I *computer desktop*, chiamati anche *computer fissi*, vengono chiamati così proprio perché sono progettati per poter essere posizionati su una scrivania o su un tavolo. Possono offrire prestazioni elevate; il confronto con altre tipologie dipende comunque dai componenti e dall’utilizzo.
 ]
 
-#tipo([Computer portatili], "portatile.png")[
+#tipo([Computer portatili], "portatile.jpg")[
   I *computer portatili*, chiamati anche semplicemente *notebook* o *laptop*, sono computer di dimensioni ridotte, proprio per poter essere facilmente trasportati ovunque. Infatti sono dotati di una *batteria ricaricabile*.
 ]
 
 == Smartphone e tablet
 
-#tipo([Smartphone], "smartphone.png")[
+#tipo([Smartphone], "smartphone.jpg")[
   Gli *smartphone* non sono altro che telefoni cellulari dotati di uno *schermo touchscreen* e di funzionalità proprie dei computer. Con uno smartphone è possibile effettuare telefonate, navigare su Internet, inviare e ricevere messaggi di testo o di posta elettronica.
 ]
 
-#tipo([Tablet], "tablet.png")[
+#tipo([Tablet], "tablet.jpg")[
   I *tablet* sono dispositivi dotati di caratteristiche *hardware e software* proprie degli smartphone che, a seconda dei casi, consentono o meno di sostituire un computer portatile.
 ]
 
@@ -45,19 +45,19 @@
 
 = Altre tipologie di computer
 
-#tipo([Console], "console.png")[
+#tipo([Console], "console.jpg")[
   Le *console* sono particolari computer progettati principalmente per i *videogiochi*. Sono collegabili a un televisore oppure sono dotate di schermo integrato. Di solito hanno bisogno di un *controller* per funzionare.
 ]
 
-#tipo([Server], "server.png")[
+#tipo([Server], "server.jpg")[
   I *server* sono speciali computer che forniscono *servizi, dati o risorse* ad altri computer attraverso la rete Internet. Permettono, per esempio, di visitare pagine web, guardare un film in streaming o utilizzare un social network.
 ]
 
-#tipo([Dispositivi wearable], "smartwatch.png")[
+#tipo([Dispositivi wearable], "smartwatch.jpg")[
   I *dispositivi wearable* sono piccoli computer che possono essere *indossati*, come smartwatch, auricolari e smartglasses. Di solito hanno sensori per misurare alcuni parametri di chi li indossa, come frequenza cardiaca, sonno e rumore.
 ]
 
-#tipo([Sistemi embedded], "embedded.png")[
+#tipo([Sistemi embedded], "embedded.jpg")[
   I *sistemi embedded* sono particolari computer inseriti all’interno di un dispositivo o di un macchinario, progettati per svolgere *funzioni specifiche*. Il termine inglese _embedded_ significa *«incorporato»*. Ne sono esempi i sistemi presenti in lavatrici, forni a microonde e altre apparecchiature elettroniche e industriali.
 ]
 
@@ -84,7 +84,7 @@ A differenza di un normale computer o di uno smartphone, che servono a fare tant
     - *Dispositivi medici:* pacemaker e macchinari per ospedali.
     - *Robotica:* robot industriali nelle catene di montaggio.
   ],
-  foto("pacemaker.png", altezza: 65mm, didascalia: [Il pacemaker è un esempio di dispositivo medico con un sistema incorporato.]),
+  foto("pacemaker.jpg", altezza: 65mm, didascalia: [Il pacemaker è un esempio di dispositivo medico con un sistema incorporato.]),
 )
 
 #pagebreak()
@@ -127,9 +127,9 @@ Per *software (SW)* si intende tutto ciò che c’è ma *non è tangibile*. È l
 Windows e Android sono esempi di software. Anche le applicazioni che usiamo per accedere ai servizi online fanno parte del software: ciò che utilizziamo non si esaurisce nelle componenti fisiche del dispositivo.
 
 #grid(columns: (1.7fr, 1fr, 0.9fr), column-gutter: 8mm,
-  foto("windows.png", altezza: 18mm, didascalia: [Windows.]),
-  foto("android.png", altezza: 18mm, didascalia: [Android.]),
-  foto("drive.png", altezza: 18mm, didascalia: [Google Drive.]),
+  foto("windows.jpg", altezza: 18mm, didascalia: [Windows.]),
+  foto("android.jpg", altezza: 18mm, didascalia: [Android.]),
+  foto("drive.jpg", altezza: 18mm, didascalia: [Google Drive.]),
 )
 
 #richiamo[
