@@ -32,20 +32,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dispense-informatica-pdf
-          path: |
-            dist/1-file-cartelle.pdf
-            dist/2-inviare-condividere-file.pdf
-            dist/3-bit-byte-dimensioni.pdf
-            dist/4-introduzione-computer.pdf
-            dist/5-software.pdf
-            dist/6-hardware.pdf
-            dist/7-funzionamento-computer.pdf
-          if-no-files-found: error
-          retention-days: 90
-      - name: Pubblica gli archivi sorgenti
-        uses: actions/upload-artifact@v4
-        with:
-          name: dispense-informatica-sorgenti
-          path: dist/*.zip
+          path: dist/*.pdf
           if-no-files-found: error
           retention-days: 90

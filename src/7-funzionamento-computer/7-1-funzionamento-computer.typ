@@ -1,4 +1,5 @@
 #import "/styles/percorso-computer.typ": *
+#import "/styles/didattica.typ": esempio-teoria
 
 = Dall’accensione al sistema pronto
 
@@ -54,9 +55,8 @@ Il sistema operativo conservato nell’SSD non viene consumato quando si avvia i
 
 = Un comando mette in relazione più parti
 
-== Esempio guidato — Aprire una foto
-
-#table(columns: (1fr, 1fr),
+#esempio-teoria(titolo: [Esempio guidato: aprire una foto])[
+  #table(columns: (1fr, 1fr),
   table.header([Fase], [Che cosa accade]),
   [Input], [Doppio clic su un file fotografico tramite mouse],
   [Sistema operativo], [Riceve il comando e permette di aprire l'applicazione adatta],
@@ -66,6 +66,7 @@ Il sistema operativo conservato nell’SSD non viene consumato quando si avvia i
 )
 
 Questo è uno *schema semplificato*: non descrive tutte le operazioni interne, ma permette di riconoscere i compiti dei componenti.
+]
 
 Il doppio clic non contiene già l’immagine: è una richiesta dell’utente. Il sistema operativo e l’applicazione coordinano l’apertura; i dati conservati nell’SSD vengono letti e resi disponibili nella memoria di lavoro. CPU e, quando coinvolta, GPU eseguono le operazioni necessarie alla presentazione. Il monitor produce l’output visibile.
 

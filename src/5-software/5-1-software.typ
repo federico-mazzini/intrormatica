@@ -1,5 +1,6 @@
 #import "/styles/percorso-computer.typ": richiamo
 #import "/styles/template.typ": grigio
+#import "/styles/didattica.typ": esempio-teoria
 
 #set par(spacing: 1em)
 
@@ -89,7 +90,11 @@ Il *software applicativo* serve all’utente per fare qualcosa di concreto. Il s
 
 == Come usa le risorse del computer
 
-Quando un’applicazione deve salvare un documento o inviare un messaggio, chiede al *sistema operativo* di accedere alla memoria secondaria o alla rete. Per esempio, Telegram gestisce la conversazione che vedi sullo schermo e usa i servizi di rete del sistema operativo per inviare i dati.
+Quando un’applicazione deve salvare un documento o inviare un messaggio, chiede al *sistema operativo* di accedere alla memoria secondaria o alla rete.
+
+#esempio-teoria[
+  Telegram gestisce la conversazione che vedi sullo schermo e usa i servizi di rete del sistema operativo per inviare i dati.
+]
 
 == La scelta della piattaforma
 
@@ -97,6 +102,6 @@ Un’applicazione installabile deve essere compatibile con il *sistema operativo
 
 #foto("telegram-desktop", larghezza: 91%, altezza: 75mm, didascalia: [La pagina di Telegram Desktop mostra download distinti per Windows, macOS e Linux.])
 
-#richiamo[
+#esempio-teoria[
   Se usi un computer con macOS, scegli la versione per macOS. L’applicazione serve allo stesso scopo sulle diverse piattaforme, ma ogni versione usa i servizi del sistema operativo per cui è stata preparata.
 ]

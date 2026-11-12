@@ -1,5 +1,6 @@
 #import "/styles/percorso-computer.typ": *
 #import "/styles/template.typ": grigio
+#import "/styles/didattica.typ": esempio-teoria
 
 // Immagini originali delle slide; proporzioni conservate, senza ritaglio.
 #let foto(nome, altezza: 32mm, didascalia: none) = block(breakable: false, width: 100%)[
@@ -75,10 +76,8 @@ A differenza di un normale computer o di uno smartphone, che servono a fare tant
 
 #foto("robot.jpg", altezza: 52mm, didascalia: [Robot industriali nelle catene di montaggio: un esempio di sistemi progettati per funzioni specifiche.])
 
-== Esempi nell’uso quotidiano
-
 #grid(columns: (1.25fr, 1fr), column-gutter: 8mm,
-  [
+  esempio-teoria(titolo: [Esempi nell’uso quotidiano])[
     - *Elettrodomestici:* lavatrici, forni a microonde e frigoriferi intelligenti.
     - *Automobili:* controllo dei freni (*ABS*), airbag e gestione del motore.
     - *Dispositivi medici:* pacemaker e macchinari per ospedali.
@@ -97,15 +96,15 @@ Un server rimane in attesa di esaudire le richieste di altri computer. Nella pra
 
 #foto("server-ibm.jpg", altezza: 55mm, didascalia: [Sistemi server: computer che mettono dati e servizi a disposizione di altri computer.])
 
-== Esempi nell’uso quotidiano
-
-*Streaming e social media.* I video e le immagini che visualizziamo sui social media o sulle piattaforme di streaming sono memorizzati sui server dell’azienda che fornisce il servizio, non necessariamente in modo permanente sul nostro dispositivo.
+#esempio-teoria(titolo: [Esempi nell’uso quotidiano])[
+  *Streaming e social media.* I video e le immagini che visualizziamo sui social media o sulle piattaforme di streaming sono memorizzati sui server dell’azienda che fornisce il servizio, non necessariamente in modo permanente sul nostro dispositivo.
 
 *Gaming online.* Nei giochi multiplayer online, un server centrale elabora in tempo reale le posizioni dei giocatori, i punteggi e le azioni di gioco, *sincronizzando la partita*.
 
 *Cloud storage: Google Drive e iCloud.* Quando salviamo un file nel cloud, per esempio su Google Drive, stiamo semplicemente salvando un file nella memoria di un altro computer: *un server*.
 
 *Web ed email.* I contenuti dei siti web sono ospitati su server, chiamati *web server*. Allo stesso modo, l’invio e la ricezione delle email, per esempio con Gmail o Outlook, sono gestiti dai *server di posta*, che mandano le email ai destinatari corretti.
+]
 
 #pagebreak()
 
@@ -124,7 +123,9 @@ Per *hardware (HW)* si intende tutto ciò che riguarda il computer e che è *tan
 
 Per *software (SW)* si intende tutto ciò che c’è ma *non è tangibile*. È la parte invisibile di un elaboratore, costituita dai *programmi* residenti nella memoria del computer o nei supporti di memorizzazione.
 
-Windows e Android sono esempi di software. Anche le applicazioni che usiamo per accedere ai servizi online fanno parte del software: ciò che utilizziamo non si esaurisce nelle componenti fisiche del dispositivo.
+#esempio-teoria[
+  Windows e Android sono esempi di software. Anche le applicazioni che usiamo per accedere ai servizi online fanno parte del software: ciò che utilizziamo non si esaurisce nelle componenti fisiche del dispositivo.
+]
 
 #grid(columns: (1.7fr, 1fr, 0.9fr), column-gutter: 8mm,
   foto("windows.jpg", altezza: 18mm, didascalia: [Windows.]),

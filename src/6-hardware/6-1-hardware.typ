@@ -1,5 +1,6 @@
 #import "/styles/percorso-computer.typ": richiamo
 #import "/styles/template.typ": grigio
+#import "/styles/didattica.typ": esempio-teoria
 
 #set par(spacing: 1em)
 
@@ -102,7 +103,11 @@ Una periferica di *output* permette al computer di *mostrare risultati o comunic
 
 == Periferiche di input e output
 
-Una periferica di *input/output* ha una duplice funzione: permette di *ricevere e fornire dati*. Un touchscreen mostra le immagini e rileva il tocco. Una chiavetta USB può essere letta e scritta. Un router invia e riceve dati attraverso la rete.
+Una periferica di *input/output* ha una duplice funzione: permette di *ricevere e fornire dati*.
+
+#esempio-teoria(titolo: [Esempi di input e output])[
+  Un touchscreen mostra le immagini e rileva il tocco. Una chiavetta USB può essere letta e scritta. Un router invia e riceve dati attraverso la rete.
+]
 
 #galleria(
   foto("touchscreen", didascalia: [Touchscreen]),
@@ -154,10 +159,14 @@ La *CPU* (_Central Processing Unit_), o *processore*, è il «cervello» del com
   [
     La CPU è composta da miliardi di *transistor*, piccoli interruttori elettronici che controllano il passaggio della corrente. I circuiti costruiti con questi interruttori rappresentano ed elaborano le informazioni binarie *0 e 1*.
 
-    Negli anni Cinquanta un transistor poteva avere dimensioni dell’ordine del centimetro. Per immaginare la scala dei nanometri, prendiamo lo spessore di un capello, circa *0,06 mm*. In quella distanza entrerebbero *20.000* segmenti da *3 nm*.
+    Negli anni Cinquanta un transistor poteva avere dimensioni dell’ordine del centimetro.
   ],
   foto("processore", altezza: 40mm, didascalia: [Un processore visto sopra e sotto.]),
 )
+
+#esempio-teoria(titolo: [Esempio: le dimensioni dei transistor])[
+  Per immaginare la scala dei nanometri, prendiamo lo spessore di un capello, circa *0,06 mm*. In quella distanza entrerebbero *20.000* segmenti da *3 nm*.
+]
 
 == Frequenza di clock
 
@@ -204,7 +213,11 @@ La tabella riporta esempi di capacità e velocità. I valori dipendono dal dispo
 
 == La RAM in uso
 
-La *RAM* ha tempi di accesso rapidi ed è *volatile*: perde il suo contenuto allo spegnimento. Se stai scrivendo un testo con Word, il programma e il testo su cui lavori si trovano temporaneamente nella RAM. Con il *salvataggio*, il file viene scritto nella memoria secondaria, che è non volatile.
+La *RAM* ha tempi di accesso rapidi ed è *volatile*: perde il suo contenuto allo spegnimento.
+
+#esempio-teoria[
+  Se stai scrivendo un testo con Word, il programma e il testo su cui lavori si trovano temporaneamente nella RAM. Con il *salvataggio*, il file viene scritto nella memoria secondaria, che è non volatile.
+]
 
 #foto("ram", altezza: 45mm, didascalia: [Un modulo di memoria RAM.])
 

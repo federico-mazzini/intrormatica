@@ -1,6 +1,6 @@
 # File e cartelle
 
-Nuova dispensa indipendente dalla precedente, con tutta la teoria in `src/1-file-cartelle/1-1-file-cartelle.typ` e il documento completo in `src/1-file-cartelle/1-0-main.typ`. Il template condiviso è riutilizzato senza modifiche.
+Nuova dispensa indipendente dalla precedente, con tutta la teoria in `src/1-file-cartelle/1-1-file-cartelle.typ` e il documento completo in `src/1-file-cartelle/01 - File e cartelle.typ`. Il template condiviso è riutilizzato senza modifiche.
 
 Fonte: [Introduzione ai file e cartelle](https://app.notion.com/p/Introduzione-ai-file-e-cartelle-3fc7850e747480aba01bd35fd1e8af9c). La pagina Notion è stata consultata senza modificarla. Testi e tabelle sono ripresi dalla fonte con lievi adattamenti; i percorsi e l’albero usano esempi scolastici coerenti tra loro.
 
@@ -12,10 +12,10 @@ Compilazione con Typst 0.15.1:
 bash scripts/build-file-cartelle.sh
 ```
 
-Output: `dist/1-file-cartelle.pdf`. Per l’aggiornamento continuo:
+Output: `dist/01 - File e cartelle.pdf`. Per l’aggiornamento continuo:
 
 ```bash
-typst watch --root . src/1-file-cartelle/1-0-main.typ dist/1-file-cartelle.pdf
+typst watch --root . "src/1-file-cartelle/01 - File e cartelle.typ" "dist/01 - File e cartelle.pdf"
 ```
 
 I comandi di compilazione e il workflow della prima dispensa restano invariati.

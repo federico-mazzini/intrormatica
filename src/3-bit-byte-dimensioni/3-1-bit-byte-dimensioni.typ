@@ -10,11 +10,11 @@ Ogni giorno utilizziamo tantissimi *dati*: numeri, parole, immagini, suoni e vid
 
 Un *dato* è un elemento che rappresenta qualcosa, come un numero, una parola o un simbolo.
 
-#nota[
-  *ESEMPI DI DATI*  ·  `5`   ·   `Luca`   ·   `18:30`   ·   `37,5`
-]
+#esempio-teoria(titolo: [Esempi di dati])[
+  `5` · `Luca` · `18:30` · `37,5`
 
-Presi singolarmente, questi dati non ci dicono molto. Il numero *25*, ad esempio, potrebbe rappresentare un'età, una temperatura o un prezzo.
+  Presi singolarmente, questi dati non ci dicono molto. Il numero *25*, ad esempio, potrebbe rappresentare un'età, una temperatura o un prezzo.
+]
 
 == Che cos'è un'informazione?
 
@@ -24,9 +24,8 @@ Un'*informazione* è il significato che possiamo ricavare da uno o più dati qua
 
 Il dato è sempre lo stesso, ma l'informazione cambia in base al contesto.
 
-#richiamo[
-  *DA RICORDARE* \
-  I *dati* rappresentano qualcosa, mentre le *informazioni* sono i significati che ricaviamo interpretando i dati.
+#da-ricordare[Dai dati alle informazioni][
+  I dati rappresentano qualcosa, mentre le informazioni sono i significati che ricaviamo interpretando i dati.
 ]
 ]
 
@@ -36,7 +35,11 @@ Il dato è sempre lo stesso, ma l'informazione cambia in base al contesto.
 
 Un *file* è un insieme di dati digitali conservati con un nome. Un file può contenere un testo, una fotografia, un brano audio, un video oppure altri tipi di contenuto.
 
-Possiamo immaginarlo come un contenitore di informazioni. Per esempio, il file `vacanze.jpg` contiene i dati necessari a rappresentare una fotografia, mentre `appunti.txt` contiene un testo.
+Possiamo immaginarlo come un contenitore di informazioni.
+
+#esempio-teoria[
+  Il file `vacanze.jpg` contiene i dati necessari a rappresentare una fotografia, mentre `appunti.txt` contiene un testo.
+]
 
 #diagramma("/assets/svg/tipi_file.svg", width: 100%)
 
@@ -65,8 +68,8 @@ Un messaggio, una fotografia o un video sono rappresentati nel computer attraver
 
 Non ci sono numeri scritti al suo interno: 0 e 1 rappresentano *due stati distinti*. Nei circuiti elettronici, per esempio, questi stati possono corrispondere a due diversi livelli di tensione elettrica.
 
-#richiamo[
-  *DA RICORDARE*  ·  Un bit può valere soltanto *0 oppure 1*.
+#da-ricordare[I due valori di un bit][
+  Un bit può valere soltanto 0 oppure 1.
 ]
 ]
 
@@ -91,7 +94,9 @@ Come abbiamo visto, il contenuto di un file è rappresentato attraverso una sequ
 
 Ogni file contiene una quantità diversa di dati e, di conseguenza, un numero diverso di bit e byte. La *dimensione di un file*, chiamata anche _peso_, indica quanto spazio occupa nella memoria del computer e si misura in *byte*.
 
-Per esempio, un semplice file di testo può contenere poche migliaia di byte, mentre una fotografia può contenerne milioni e un video persino miliardi.
+#esempio-teoria[
+  Un semplice file di testo può contenere poche migliaia di byte, mentre una fotografia può contenerne milioni e un video persino miliardi.
+]
 
 #diagramma("/assets/svg/sequenze.svg", width: 100%)
 
@@ -117,8 +122,7 @@ Per esempio, un semplice file di testo può contenere poche migliaia di byte, me
 
 Per misurare una distanza non si usano sempre i metri: a volte è più comodo usare i chilometri. Allo stesso modo, per misurare la dimensione dei file si usano kilobyte, megabyte, gigabyte e altri multipli.
 
-#richiamo[
-  *ESEMPIO* \
+#esempio-teoria[
   Invece di scrivere che un file occupa 2048 byte, si può dire che occupa *2 KB*, usando le equivalenze della scheda successiva.
 ]
 
@@ -138,9 +142,8 @@ I *multipli* sono unità più grandi del byte. Nelle equivalenze di questa sched
   [YB], [yottabyte], [1 YB = 1024 ZB],
 )
 
-#richiamo[
-  *DA RICORDARE* \
-  Questa scheda usa *1024* per le equivalenze. In altri contesti è possibile trovare conversioni basate su 1000: controllare sempre la convenzione utilizzata.
+#da-ricordare[La convenzione delle equivalenze][
+  Questa scheda usa 1024 per le equivalenze. In altri contesti è possibile trovare conversioni basate su 1000: controllare sempre la convenzione utilizzata.
 ]
 ]
 
@@ -156,15 +159,15 @@ Per passare a un'unità più grande si *divide per 1024*; per passare a un'unit�
 
 == Esempi di conversione
 
-#esempio-conversione[1. Da unità grande a piccola][
+#esempio-teoria(titolo: [Esempio 1. Da unità grande a piccola])[
   2 GB = 2 × 1024 = *2048 MB*
 ]
 
-#esempio-conversione[2. Da unità piccola a grande][
+#esempio-teoria(titolo: [Esempio 2. Da unità piccola a grande])[
   3072 KB = 3072 ÷ 1024 = *3 MB*
 ]
 
-#esempio-conversione[3. Due passaggi consecutivi][
+#esempio-teoria(titolo: [Esempio 3. Due passaggi consecutivi])[
   1 GB = 1 × 1024 = 1024 MB \
   1024 MB = 1024 × 1024 = *1.048.576 KB*
 ]

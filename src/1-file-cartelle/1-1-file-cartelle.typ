@@ -1,5 +1,5 @@
 #import "/styles/template.typ": dispensa, verde, grigio
-#import "/styles/didattica.typ": richiamo, diagramma
+#import "/styles/didattica.typ": richiamo, diagramma, da-ricordare, esempio-teoria
 
 = Che cos’è un file?
 
@@ -7,11 +7,12 @@ Un *file* è un insieme di informazioni salvate su un computer e identificate da
 
 Si può immaginare un file come un *contenitore digitale*: al suo interno possono esserci informazioni di diverso tipo, come testi, immagini, suoni o video.
 
-*Esempi di file*
-- Un *documento di testo*, come una relazione di informatica.
+#esempio-teoria(titolo: [Esempi di file])[
+  - Un *documento di testo*, come una relazione di informatica.
 - Un’*immagine*, come una fotografia scattata con lo smartphone o scaricata da Internet.
 - Un *file audio*, come una canzone o una registrazione vocale.
 - Un *video*.
+]
 
 = Nome ed estensione di un file
 
@@ -26,7 +27,7 @@ Il nome completo di un file comprende due parti, separate da un punto: *il nome 
 
 == A cosa serve l’estensione?
 
-L’*estensione* è la parte finale del nome di un file, dopo il punto: aiuta a riconoscere il formato. Permette a noi di capire di cosa si tratta e al computer di individuare un programma con cui aprirlo.
+L’*estensione* è la parte finale del nome di un file, dopo il punto: aiuta a riconoscere il formato. Il *formato di un file* permette a noi di capire di cosa si tratta e al computer di individuare il programma giusto con cui aprirlo.
 
 #table(
   columns: (1.35fr, 0.7fr, 1.3fr),
@@ -39,7 +40,9 @@ L’*estensione* è la parte finale del nome di un file, dopo il punto: aiuta a 
   [Video.mp4], [.mp4], [Video],
 )
 
-#pagebreak()
+#esempio-teoria[
+  Un file chiamato torta.jpg fa capire a una persona che si tratta di un'immagine (e che probabilmente sarà l'immagine di una torta) e al computer che per aprire quel file dovrà utilizzare il programma che legge le immagini.
+]
 
 == Estensioni più comuni
 
@@ -59,9 +62,15 @@ L’*estensione* è la parte finale del nome di un file, dopo il punto: aiuta a 
 
 Una *cartella*, chiamata anche _directory_, è un contenitore che permette di raggruppare file e mantenerli ordinati. Usare cartelle con nomi chiari aiuta a trovare più facilmente ciò che serve.
 
-Per esempio, si può creare una cartella per la propria classe e raccogliere al suo interno i materiali delle diverse materie.
+#esempio-teoria[
+  Si può creare una cartella per l'anno scolastico e raccogliere al suo interno i materiali delle diverse materie.
+]
 
-Una cartella può contenere *sia file sia altre cartelle*: una cartella contenuta in un’altra viene chiamata *sottocartella*. Questa organizzazione su più livelli forma una *struttura gerarchica*, rappresentabile come un albero.
+Una cartella può contenere *sia file sia altre cartelle*: una cartella contenuta in un’altra viene chiamata *sottocartella*.
+Continuando l'esempio fatto in precedenza, è possibile creare una cartella per ogni materia, in modo da organizzare meglio i contenuti.
+
+L'insieme di cartelle e sottocartelle forma una *struttura gerarchica* chiamata *albero*.
+
 
 #diagramma("/assets/svg/albero-file-cartelle.svg")
 
@@ -71,39 +80,54 @@ Una cartella può contenere *sia file sia altre cartelle*: una cartella contenut
 
 = Il percorso di un file
 
-Le cartelle sono organizzate *su livelli*: ciascuna può contenerne altre, che a loro volta possono contenere ulteriori cartelle e file.
+Come abbiamo visto, le cartelle sono organizzate *su livelli*: ciascuna può contenerne altre, che a loro volta possono contenere ulteriori cartelle e file.
 
 Il *percorso* di un file, chiamato anche _path_, indica la sua posizione. È come un *indirizzo*: specifica dove trovare il file, indicando le cartelle che lo contengono.
 
 == Un esempio concreto
 
-Immaginiamo che la cartella *Documenti* dell’albero sia stata creata nell’unità *C:* di un computer Windows. Il percorso del file evidenziato è:
+Il percorso del file evidenziato alla pagina precedente è il seguente:
 
-#block(width: 100%, fill: rgb("#F0F7F2"), inset: 12pt, breakable: false)[
-  #set par(justify: false)
+#esempio-teoria[
   #text(size: 10pt)[`C:\Documenti\Classe 1A\Informatica\Appunti.txt`]
 ]
 
 #diagramma("/assets/svg/percorso-file-cartelle.svg")
 
-- *C:* indica l’unità di archiviazione.
+- *C:* indica l’unità di archiviazione (la memoria).
 - *Documenti*, *Classe 1A* e *Informatica* sono le cartelle da attraversare, in quest’ordine.
 - *Appunti.txt* è il file da aprire, all’interno di Informatica.
 
 #richiamo[
-  Su Windows il simbolo `\` separa i diversi elementi del percorso. Per trovare il file bisogna seguire tutta la sequenza delle cartelle.
+  Il simbolo `\` separa i diversi elementi del percorso. Per trovare il file bisogna seguire tutta la sequenza delle cartelle.
 ]
 
 = Dove vengono salvati file e cartelle?
 
-- *Sul computer:* i file vengono conservati nella memoria di archiviazione del computer utilizzato.
+- *Sul computer:* i file vengono conservati nella memoria del computer utilizzato.
 - *Nel cloud:* i file vengono conservati su altri computer, chiamati *server*, che possono trovarsi in diverse parti del mondo. Per raggiungerli ci si collega tramite *Internet*.
 
-== Stessa organizzazione, posto diverso
+Entrambe le soluzioni hanno *vantaggi e svantaggi*. Per scegliere dove salvare un file, dobbiamo pensare a come lo useremo: ci serve su un solo computer oppure vogliamo ritrovarlo anche su altri dispositivi?
 
-*Sia sul computer sia nel cloud, i file possono essere organizzati in cartelle e sottocartelle.* Cambia il luogo in cui vengono conservati, non il modo di organizzarli.
+#table(
+  columns: (0.8fr, 1.4fr, 1.4fr),
+  table.header([Aspetto], [Sul computer], [Nel cloud]),
+  [*Dove si trova*], [Nella memoria del tuo computer.], [Sui server di servizi come Drive o OneDrive.],
+  [*Internet*], [*Non serve*], [*Serve* per salvare e aggiornare i file online. Alcuni si possono usare anche senza connessione.],
+  [*Altri dispositivi*], [Devi portare una copia del file.], [Ritrovi il file entrando nel tuo account.],
+  [*Condivisione*], [E' necessario inviare una copia, per esempio via email.], [Basta condividere il file. Se viene modificato, viene anche aggiornato automaticamente.],
+  [*Possibili problemi*], [Se perdi il computer o si rompe, puoi perdere i file], [Senza Internet o accesso all’account, non è possibile utilizzare i file.],
+)
 
-Per esempio, una cartella *Classe 1A*, con le sottocartelle *Italiano* e *Informatica*, può essere creata sia sul proprio computer sia in un servizio cloud come OneDrive.
+#esempio-teoria[
+  Se scrivi una relazione e la salvi solo sul computer di casa, a scuola dovrai portarne una copia. Se la salvi nel cloud, potrai aprirla dal computer della scuola collegandoti a Internet e accedendo al tuo account.
+]
+
+#da-ricordare[Stessa organizzazione, posto diverso][
+  Sia sul computer sia nel cloud, i file possono essere organizzati in cartelle e sottocartelle. Cambia il luogo in cui vengono conservati, non il modo di organizzarli.
+
+  Per esempio, una cartella Classe 1A, con le sottocartelle Italiano e Informatica, può essere creata sia sul proprio computer sia in un servizio cloud come Google Drive.
+]
 
 #pagebreak()
 
@@ -124,88 +148,61 @@ Per esempio, una cartella *Classe 1A*, con le sottocartelle *Italiano* e *Inform
 
 == Quando si usa?
 
-- Per consegnare *relazioni e ricerche definitive*.
-- Per distribuire *dispense e moduli*.
 - Per inviare documenti destinati alla *lettura o alla stampa*.
+- Per consegnare documenti *definitivi*, per cui siamo sicuri non ci saranno più modifiche.
 
 == Dal documento al PDF
 
 #diagramma("/assets/svg/esportazione-pdf.svg")
 
-In *Documenti Google* si può usare *File → Scarica → Documento PDF (.pdf)*. Si crea una copia PDF e il documento originale rimane modificabile.
 
-#richiamo[
-  *Da ricordare* \
-  PDF non significa «impossibile da modificare», né «automaticamente sicuro». Serve principalmente a distribuire una copia del documento dall’aspetto stabile.
+I programmi per scrivere documenti, come Word, Documenti Google e LibreOffice, permettono di creare una *copia in PDF*. I passaggi possono cambiare da un programma all’altro: non serve impararli tutti a memoria. Di solito basta cercare nel menu *File* una voce come *Esporta*, *Scarica* o *Salva con nome*.
+
+#esempio-teoria[
+  In *Documenti Google* si sceglie *File → Scarica → Documento PDF (.pdf)*. Si ottiene una copia in PDF, mentre il documento originale resta disponibile e modificabile.
+]
+
+#da-ricordare[Il PDF mantiene l’aspetto del documento][
+  PDF non significa «impossibile da modificare», né «automaticamente sicuro». Serve a distribuire una copia del documento dall’aspetto visivo stabile.
 ]
 
 #pagebreak()
 
 = I file ZIP
 
-Uno *ZIP* è un file con estensione `.zip` che contiene altri file e cartelle. È utile per *inviare tutto insieme*, mantenendo l’organizzazione originale di cartelle e sottocartelle.
+Uno *ZIP* è un file con estensione `.zip` che raccoglie altri file e cartelle in *un unico file*, mantenendo l’organizzazione delle sottocartelle. Si chiama anche *archivio ZIP*.
 
 == Perché usiamo i file ZIP?
 
-- Per raccogliere una cartella con tutti i suoi file e sottocartelle in *un unico file* da inviare.
-- Per *risparmiare spazio*, quando il tipo di contenuto permette di ridurne la dimensione. La riduzione non è garantita.
+- Per *inviare più file insieme*, per esempio i documenti e le immagini di una ricerca.
+- Per *risparmiare spazio*: la compressione può ridurre la dimensione dei file, ma il risultato dipende dal loro contenuto.
 
-== Cartelle e file: dove si lavora
+== Creare uno ZIP: dalla cartella a un unico file
 
-Una *cartella* organizza file e sottocartelle. Possiamo aggiungere, spostare, rinominare ed eliminare i file, oltre ad aprirli e modificarli.
-
-Una cartella non si allega direttamente a un’email come un singolo documento. Per inviarne una copia completa possiamo prima raccogliere il contenuto in uno ZIP.
-
-#block(width: 100%, fill: rgb("#F0F7F2"), inset: 12pt, breakable: false)[
-  #set par(justify: false)
-  *Cartella di lavoro:* `Scuola` \
-  Contiene le sottocartelle *Informatica* e *Italiano*, con documenti e immagini.
-
-  *Archivio da inviare:* `Scuola.zip` \
-  Un solo file contiene gli stessi materiali e mantiene le sottocartelle.
+#esempio-teoria[
+  Immagina di avere una cartella *Scuola* con le sottocartelle *Italiano* e *Informatica*. Vuoi inviare tutti i materiali come un solo allegato: puoi creare il file *Scuola.zip*.
 ]
 
-== Il problema: voglio inviare una cartella
+Lo ZIP contiene una *copia dei file e delle sottocartelle*. La cartella originale rimane al suo posto e puoi continuare a usarla.
 
-Immagina di aver creato la cartella *Scuola* con i materiali delle materie. Per inviare tutto come un unico allegato senza perdere l’organizzazione, puoi *creare un file ZIP*.
-
-Per lavorare sui singoli documenti contenuti nello ZIP, *estrai prima il contenuto* in una cartella.
-
-#richiamo[
-  *Da ricordare* \
-  Lavoro nella *cartella*; quando voglio raccogliere e spedire tutti i contenuti come *un unico file*, creo lo *ZIP*. Se i contenuti continuano a cambiare, spesso conviene condividere una cartella su Drive.
-]
-
-// Titolo di continuazione: stessa evidenza dei capitoli, gerarchia 7.1 conservata.
-#[
-#show heading.where(level: 2): set text(size: 19pt, weight: "bold", fill: verde)
-#show heading.where(level: 3): set text(size: 14pt, weight: "bold", fill: black)
-#heading(level: 2, numbering: "1.1")[Compressione ed estrazione]
-
-=== Compressione: dalla cartella allo ZIP
-
-La *compressione* raccoglie un insieme di file e cartelle in un unico file con estensione `.zip`. Il file ZIP può essere inviato e può occupare meno spazio, a seconda dei contenuti.
-
-*Esempio:* `Scuola` → `Scuola.zip`. La cartella originale rimane disponibile.
+Creare uno ZIP viene spesso indicato con il comando *Comprimi*. Il nome del comando può cambiare in base al programma utilizzato.
 
 #diagramma("/assets/svg/compressione-zip.svg")
 
-#block(breakable: false)[
-=== Estrazione: dal file ZIP alla cartella
+== Estrarre uno ZIP: ritrovare i file e le cartelle
 
-L’*estrazione* permette di tornare ad avere un insieme di file e cartelle a partire dal singolo file ZIP.
+*Estrarre uno ZIP* significa copiare i file e le cartelle che contiene in una cartella del computer. Per lavorare sui documenti ricevuti, prima estrai il contenuto e poi apri i file estratti.
+
+#esempio-teoria[
+  Da *Scuola.zip* ottieni la cartella *Scuola*, con le sottocartelle *Italiano* e *Informatica* e i loro file. Anche lo ZIP originale rimane disponibile.
+]
 
 #diagramma("/assets/svg/estrazione-zip.svg")
+
+#da-ricordare[Lo ZIP è una copia dei materiali][
+  Le modifiche alla cartella originale o ai file estratti non aggiornano automaticamente lo ZIP già creato. Per inviare i materiali aggiornati, crea un nuovo ZIP.
+
+  Se vuoi che altre persone vedano le modifiche nel tempo, puoi invece condividere una cartella su Drive.
 ]
 
-#richiamo[
-  *Lo ZIP non si aggiorna da solo* \
-  Dopo l’estrazione, lo ZIP originale rimane. Se modifichiamo i file estratti, lo ZIP *non si aggiorna automaticamente*: per inviare le modifiche dobbiamo creare un nuovo ZIP.
-]
-
-#richiamo[
-  *Attenzione alle dimensioni* \
-  Creare uno ZIP non garantisce che il contenuto diventi abbastanza piccolo per qualsiasi email. Bisogna controllare la dimensione dell’archivio e il limite degli allegati.
-]
-
-]
+Prima di inviare uno ZIP via email, controlla che la sua dimensione non superi il limite degli allegati.

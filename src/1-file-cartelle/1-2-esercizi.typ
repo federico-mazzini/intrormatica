@@ -108,7 +108,7 @@ Per ogni domanda scegli una sola risposta.
 
 Osserva l’albero: rispondi usando i nomi esatti dei materiali.
 
-#diagramma("/assets/svg/albero-file-cartelle.svg", width: 85%)
+#diagramma("/assets/svg/albero-file-cartelle.svg")
 
 #quesito(1, righe: 1)[Quali sono le tre sottocartelle di `Classe 1A`?]
 #quesito(2, righe: 1)[In quale cartella si trova `Tema.docx`? Quali file contiene `Informatica`?]
