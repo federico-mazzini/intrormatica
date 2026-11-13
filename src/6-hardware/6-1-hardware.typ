@@ -1,8 +1,8 @@
 #import "/styles/percorso-computer.typ": richiamo
 #import "/styles/template.typ": grigio
-#import "/styles/didattica.typ": esempio-teoria
+#import "/styles/didattica.typ": esempio-teoria, da-ricordare
 
-#set par(spacing: 1em)
+#set par(spacing: 0.8em)
 
 #let foto(nome, altezza: 33mm, didascalia: none) = block(width: 100%, breakable: false)[
   #align(center, image(
@@ -29,17 +29,17 @@
 
 == Il lavoro di un computer
 
-Possiamo schematizzare il lavoro di un computer in tre fasi: *input, elaborazione e output*. Durante il lavoro il computer può anche leggere e salvare dati.
+Il computer *riceve dati*, li *elabora* seguendo un programma e *restituisce risultati*. Queste tre fasi si chiamano *input, elaborazione e output*. Durante il lavoro può anche leggere o salvare dati nella memoria.
 
 #foto("schema-lavoro", altezza: 29mm, didascalia: [Input, elaborazione (_process_), output e archiviazione (_storage_).])
 
 - *Input.* Il computer riceve dati dall’esterno, ad esempio da tastiera, mouse o sensori.
-- *Elaborazione.* Il processore elabora i dati seguendo le istruzioni memorizzate, cioè il programma.
+- *Elaborazione.* Il processore esegue le istruzioni del programma e lavora sui dati ricevuti.
 - *Output.* Il computer restituisce un risultato, per esempio mostrandolo sullo schermo, stampandolo su un foglio o salvandolo su un dispositivo esterno.
 
 == L’idea di base
 
-L’*architettura di Von Neumann* è il modello alla base dei computer moderni. L’idea è quella di avere *un’unica memoria* in cui vengono mantenuti sia i *dati* sia le *istruzioni* dei programmi.
+L’*architettura di Von Neumann* è un modello che aiuta a capire come è organizzato un computer. La sua idea centrale è conservare nella *stessa memoria* sia i *dati* da elaborare sia le *istruzioni* dei programmi.
 
 #grid(columns: (1.1fr, 1fr), column-gutter: 7mm,
   [
@@ -59,16 +59,16 @@ L’*architettura di Von Neumann* è il modello alla base dei computer moderni. 
 
 #grid(columns: (1.65fr, 1fr), column-gutter: 7mm,
   [
-    Il *case* è il contenitore che ospita e protegge i componenti interni di un computer. Fa da *struttura*, tiene insieme i componenti e li protegge da polvere e urti. Lascia accessibili le porte per collegare dispositivi di input e output. La forma e i materiali contribuiscono anche all’estetica del computer.
+    Il *case* è il contenitore dei componenti interni di un computer. Li sostiene e li protegge da urti e polvere. Le aperture lasciano passare l’aria e permettono di raggiungere le porte a cui si collegano i dispositivi esterni.
 
-    Nei portatili e negli smartphone si parla spesso di *scocca*. Oltre a proteggere e sostenere i componenti, la scocca può contribuire a disperdere il calore.
+    Nei portatili e negli smartphone il contenitore viene spesso chiamato *scocca*. La sua forma e i suoi materiali contribuiscono alla protezione, alla dispersione del calore e all’aspetto del dispositivo.
   ],
   foto("case", altezza: 65mm, didascalia: [Il case di un computer fisso.]),
 )
 
 == La scheda madre
 
-La *scheda madre* è il cuore di ogni computer. È una piastra che raccoglie i componenti principali e li collega tra loro mediante *piste di rame* stampate. A seconda del dispositivo può avere dimensioni molto diverse.
+La *scheda madre* è la scheda principale del computer. Ospita o collega componenti come processore, RAM e porte. Le *piste di rame* sulla sua superficie permettono ai componenti di scambiarsi segnali. Forma e dimensioni cambiano a seconda del dispositivo.
 
 #galleria(
   foto("scheda-madre", altezza: 58mm, didascalia: [Una scheda madre per computer fisso.]),
@@ -81,7 +81,7 @@ La *scheda madre* è il cuore di ogni computer. È una piastra che raccoglie i c
 
 == Periferiche di input
 
-Una periferica di *input* permette al computer di *ricevere dati e comandi dall’esterno*. Senza input, il computer sarebbe come una scatola chiusa che non riceve informazioni dall’ambiente.
+Una *periferica* è un dispositivo che permette al computer di scambiare dati con l’esterno. Le periferiche di *input*, cioè di ingresso, inviano dati e comandi al computer. La tastiera invia i caratteri digitati; il microfono acquisisce i suoni.
 
 #galleria(
   foto("tastiera", didascalia: [Tastiera]),
@@ -92,7 +92,7 @@ Una periferica di *input* permette al computer di *ricevere dati e comandi dall�
 
 == Periferiche di output
 
-Una periferica di *output* permette al computer di *mostrare risultati o comunicarli all’esterno*. Senza output, i risultati non sarebbero visibili o utilizzabili.
+Le periferiche di *output*, cioè di uscita, rendono disponibili i risultati dell’elaborazione. Il monitor mostra immagini e testi, la stampante li riporta su carta, le cuffie e gli altoparlanti riproducono i suoni.
 
 #galleria(
   foto("monitor", didascalia: [Monitor]),
@@ -103,10 +103,10 @@ Una periferica di *output* permette al computer di *mostrare risultati o comunic
 
 == Periferiche di input e output
 
-Una periferica di *input/output* ha una duplice funzione: permette di *ricevere e fornire dati*.
+Alcune periferiche sono sia di *input* sia di *output*: i dati possono viaggiare in entrambe le direzioni.
 
 #esempio-teoria(titolo: [Esempi di input e output])[
-  Un touchscreen mostra le immagini e rileva il tocco. Una chiavetta USB può essere letta e scritta. Un router invia e riceve dati attraverso la rete.
+  Il *touchscreen* mostra immagini (output) e rileva il tocco (input). Una *chiavetta USB* permette di leggere e salvare dati. Un *router* invia e riceve dati attraverso la rete.
 ]
 
 #galleria(
@@ -121,7 +121,7 @@ Una periferica di *input/output* ha una duplice funzione: permette di *ricevere 
 
 == Interfacce e porte esterne
 
-Le interfacce e le porte esterne permettono al computer di comunicare con il mondo esterno, collegando periferiche, reti e dispositivi di archiviazione. Le *porte* sono i connettori fisici. Le *interfacce* comprendono le regole, chiamate *protocolli*, che permettono ai dispositivi di comunicare correttamente.
+Le *porte* sono i connettori a cui colleghiamo cavi, periferiche e altri dispositivi. Per comunicare, però, non basta un collegamento fisico: i dispositivi devono anche seguire regole comuni, chiamate *protocolli*. L’*interfaccia* comprende le caratteristiche del collegamento e della comunicazione.
 
 #foto("porte", altezza: 61mm, didascalia: [Forme e nomi dei connettori. La figura mostra anche porte usate su computer meno recenti.])
 
@@ -139,25 +139,25 @@ All’esterno del computer troviamo anche pulsanti di accensione e LED che ne se
 
 == Altri componenti
 
-*GPU (scheda grafica).* È un processore dedicato all’elaborazione grafica. Può essere integrato nel processore o presente su una scheda dedicata, per esempio in un computer usato per la grafica 3D.
+*GPU e scheda grafica.* La *GPU* è un processore specializzato nell’elaborazione grafica. Può essere integrata nello stesso chip della CPU oppure trovarsi su una *scheda grafica dedicata*, usata per esempio per la grafica 3D.
 
-*Alimentazione.* Fornisce energia a tutti i componenti del computer. Un portatile può usare un alimentatore collegato alla rete elettrica oppure una batteria.
+*Alimentazione.* L’alimentatore fornisce ai componenti l’energia elettrica necessaria. Un portatile può funzionare anche grazie alla batteria.
 
-*Raffreddamento.* Mantiene CPU e GPU a temperature sicure. Può avvenire ad aria, con ventole e dissipatori, oppure a liquido. Un raffreddamento insufficiente può causare surriscaldamenti e malfunzionamenti.
+*Raffreddamento.* Allontana il calore prodotto dai componenti. Può usare dissipatori e ventole oppure un circuito a liquido. Se il calore non viene disperso, il computer può surriscaldarsi e funzionare male.
 
-*Schede aggiuntive.* Aggiungono funzioni come audio, Wi-Fi o Ethernet. Si collegano a slot appositi sulla scheda madre e permettono di personalizzare il PC in base alle esigenze.
+*Schede aggiuntive.* Si inseriscono negli *slot*, appositi connettori della scheda madre, per aggiungere funzioni come audio, Wi-Fi o Ethernet.
 
 #pagebreak()
 
 = La CPU
 
-La *CPU* (_Central Processing Unit_), o *processore*, è il «cervello» del computer. Esegue le istruzioni dei programmi e compie calcoli. Ogni azione, dall’apertura di un file alla riproduzione di un video, richiede l’esecuzione di istruzioni da parte della CPU.
+La *CPU* (_Central Processing Unit_), chiamata anche *processore*, esegue le istruzioni dei programmi ed elabora i dati. Interviene nelle attività del computer, dall’apertura di un documento alla riproduzione di un video.
 
 == I transistor
 
 #grid(columns: (1.85fr, 1fr), column-gutter: 6mm,
   [
-    La CPU è composta da miliardi di *transistor*, piccoli interruttori elettronici che controllano il passaggio della corrente. I circuiti costruiti con questi interruttori rappresentano ed elaborano le informazioni binarie *0 e 1*.
+    Una CPU moderna contiene miliardi di *transistor*. Possiamo immaginarli come minuscoli interruttori elettronici: i circuiti formati dai transistor permettono di rappresentare ed elaborare i valori binari *0 e 1*.
 
     Negli anni Cinquanta un transistor poteva avere dimensioni dell’ordine del centimetro.
   ],
@@ -165,22 +165,24 @@ La *CPU* (_Central Processing Unit_), o *processore*, è il «cervello» del com
 )
 
 #esempio-teoria(titolo: [Esempio: le dimensioni dei transistor])[
-  Per immaginare la scala dei nanometri, prendiamo lo spessore di un capello, circa *0,06 mm*. In quella distanza entrerebbero *20.000* segmenti da *3 nm*.
+  Un *nanometro (nm)* è un miliardesimo di metro. Per immaginare questa scala, consideriamo un capello spesso circa *0,06 mm*: nel suo spessore entrerebbero *20.000* segmenti da *3 nm*.
 ]
 
 == Frequenza di clock
 
-La *frequenza di clock* indica quanti cicli scandiscono il lavoro della CPU in un secondo. Si misura in *hertz* (Hz). *1 GHz* corrisponde a *1.000.000.000 di cicli al secondo*. A parità di processore e di lavoro da svolgere, una frequenza più alta può velocizzare l’elaborazione.
+Il *clock* scandisce il lavoro della CPU attraverso cicli regolari. La sua *frequenza* indica quanti cicli avvengono in un secondo e si misura in *hertz (Hz)*. *1 GHz* significa *un miliardo di cicli al secondo*.
 
-Anche solo per eseguire un’app, il computer deve aggiornare lo schermo e nel frattempo gestire il tocco o la tastiera, mantenere la connessione a Internet, ricevere notifiche e aggiornare le app in background.
+Un ciclo non coincide necessariamente con un’istruzione completa. Una frequenza più alta può velocizzare il lavoro, ma le prestazioni dipendono anche dalle caratteristiche del processore e dal programma eseguito.
+
+Mentre usi un’app, il computer può anche aggiornare lo schermo, gestire la tastiera, mantenere la connessione e ricevere notifiche: deve quindi coordinare molte attività.
 
 == I core
 
 #grid(columns: (1.2fr, 1fr), column-gutter: 6mm,
   [
-    Un *core* è un’unità di elaborazione all’interno della CPU. Con più core il processore può svolgere più attività in parallelo. Si parla di processori *dual-core* (2), *quad-core* (4) e *octa-core* (8).
+    Un *core* è un’unità della CPU capace di eseguire istruzioni. Più core permettono di distribuire il lavoro e svolgere più attività in parallelo. Le sigle *dual-core*, *quad-core* e *octa-core* indicano rispettivamente *2, 4 e 8 core*.
 
-    Alcuni processori hanno core più potenti per compiti pesanti, come grafica 3D e montaggio video, e core più efficienti per attività leggere, come ascoltare musica o aggiornare le app in background.
+    Alcune CPU combinano core ad alte prestazioni, per lavori come la grafica 3D e il montaggio video, e core che consumano meno energia, adatti alle attività più leggere.
   ],
   foto("apple-a15", altezza: 39mm, didascalia: [Nel chip A15 i sei core della CPU sono suddivisi in due per le prestazioni e quattro per l’efficienza.]),
 )
@@ -191,17 +193,17 @@ Anche solo per eseguire un’app, il computer deve aggiornare lo schermo e nel f
 
 == Memoria centrale e memoria secondaria
 
-La *memoria centrale* è una memoria veloce a supporto della CPU. Contiene i dati e i programmi in uso in quel momento. È il *piano di lavoro* del computer: accesso veloce, ma spazio limitato.
+La *memoria centrale*, in particolare la *RAM*, contiene i dati e le istruzioni che servono durante il lavoro. È come un *piano di lavoro*: permette un accesso rapido ai materiali in uso, ma ha uno spazio limitato.
 
-La *memoria secondaria* conserva dati, programmi e sistema operativo anche quando il computer è spento. È il *magazzino*: i dati rimangono disponibili fino alla loro eventuale cancellazione, con più spazio di deposito e un accesso più lento rispetto alla RAM.
+La *memoria secondaria*, come un SSD o un HDD, conserva file, programmi e sistema operativo anche a computer spento. È come un *magazzino*: offre generalmente più spazio della RAM, ma l’accesso ai dati è più lento.
 
 == Capacità e velocità
 
 La *capacità* indica quanti dati può contenere una memoria. Si misura in *byte* e nei suoi multipli, come GB e TB.
 
-La *velocità* indica quanto rapidamente si possono leggere o scrivere dati. Si distingue fra velocità di lettura (_read_) e di scrittura (_write_). Si misura in *byte al secondo* e nei suoi multipli, come MB/s e GB/s.
+La *velocità di trasferimento* indica quanti dati si possono leggere o scrivere in un secondo. Si misura in *byte al secondo*, per esempio MB/s o GB/s. La velocità di lettura (_read_) può essere diversa da quella di scrittura (_write_).
 
-La tabella riporta esempi di capacità e velocità. I valori dipendono dal dispositivo.
+La tabella riprende gli esempi delle slide: sono valori indicativi, che cambiano a seconda del dispositivo e del collegamento.
 
 #table(
   columns: (1.45fr, 1fr, 1fr),
@@ -213,10 +215,10 @@ La tabella riporta esempi di capacità e velocità. I valori dipendono dal dispo
 
 == La RAM in uso
 
-La *RAM* ha tempi di accesso rapidi ed è *volatile*: perde il suo contenuto allo spegnimento.
+La *RAM* è veloce ma *volatile*: il suo contenuto si perde quando viene tolta l’alimentazione. Per conservare un documento occorre quindi salvarlo nella memoria secondaria.
 
 #esempio-teoria[
-  Se stai scrivendo un testo con Word, il programma e il testo su cui lavori si trovano temporaneamente nella RAM. Con il *salvataggio*, il file viene scritto nella memoria secondaria, che è non volatile.
+  Mentre scrivi con Word, il computer usa la RAM per il programma e il testo su cui lavori. Quando *salvi*, registra il documento nella memoria secondaria: potrai ritrovarlo anche dopo aver spento il computer.
 ]
 
 #foto("ram", altezza: 45mm, didascalia: [Un modulo di memoria RAM.])
@@ -229,9 +231,9 @@ La *RAM* ha tempi di accesso rapidi ed è *volatile*: perde il suo contenuto all
 
 #grid(columns: (1.15fr, 1fr), column-gutter: 7mm,
   [
-    Gli *HDD* (_Hard Disk Drive_) usano dischi magnetici rotanti e parti meccaniche mobili, come le testine di lettura e scrittura. Offrono grande capacità a costo contenuto e sono generalmente più lenti, più rumorosi e più sensibili agli urti rispetto agli SSD.
+    Gli *HDD* (_Hard Disk Drive_) registrano i dati su dischi magnetici che ruotano. Le testine leggono e scrivono i dati. Hanno parti meccaniche mobili e offrono molto spazio a costo contenuto; rispetto agli SSD sono generalmente più lenti, rumorosi e sensibili agli urti.
 
-    Gli *SSD* (_Solid State Drive_) usano memorie elettroniche senza parti mobili. Sono in genere più compatti, veloci e silenziosi. Anche smartphone, tablet e smartwatch usano memorie elettroniche non volatili.
+    Gli *SSD* (_Solid State Drive_) conservano i dati in memorie elettroniche, senza parti mobili. Sono generalmente più veloci e silenziosi degli HDD. Anche smartphone, tablet e smartwatch usano memorie elettroniche che mantengono i dati allo spegnimento.
   ],
   foto("hdd", altezza: 58mm, didascalia: [All’interno di un HDD, la testina si sposta sopra il disco magnetico.]),
 )
@@ -240,22 +242,24 @@ La *RAM* ha tempi di accesso rapidi ed è *volatile*: perde il suo contenuto all
 
 #grid(columns: (1.35fr, 1fr), column-gutter: 7mm,
   [
-    La *cache* è una piccola memoria molto veloce, integrata nella CPU o vicina a essa. Contiene copie di dati e istruzioni che potrebbero servire di nuovo. Ha una capacità molto più limitata della RAM, nell’ordine dei kilobyte o megabyte.
+    La *cache* è una memoria molto veloce, integrata nella CPU o vicina a essa. Conserva copie di dati e istruzioni che il processore potrebbe usare di nuovo. È molto più piccola della RAM: la sua capacità si misura solitamente in kilobyte o megabyte.
 
-    Quando serve un dato, la CPU controlla se è già in cache. Se manca, può recuperarlo dalla RAM e tenerne una copia in cache per un uso futuro.
+    Se il dato è già nella cache, la CPU può ottenerlo rapidamente. Altrimenti lo recupera dalla RAM e può conservarne una copia nella cache per gli usi successivi.
   ],
   foto("cache", altezza: 49mm, didascalia: [Nello schema, i livelli di cache L1 e L2 sono più vicini alla CPU rispetto alla RAM.]),
 )
 
 == La ROM e l’avvio
 
-La *ROM* (_Read Only Memory_) è una memoria *non volatile e in sola lettura*. Può contenere istruzioni fisse e fondamentali per l’avvio o per il funzionamento di un dispositivo. Nei computer moderni il programma che avvia la macchina è spesso conservato in una memoria *flash*, che mantiene i dati allo spegnimento e permette di aggiornare il programma.
+La *ROM* (_Read Only Memory_) è una memoria *non volatile*, destinata alla lettura di istruzioni già registrate. Può contenere istruzioni fondamentali per l’avvio o il funzionamento di un dispositivo.
+
+Nei computer moderni il *firmware* di avvio è spesso conservato in una memoria *flash*. Anche questa mantiene i dati a computer spento, ma permette di aggiornare il firmware.
 
 #pagebreak()
 
 = L’attività dei pancake
 
-Immagina di preparare la stessa ricetta due volte. La prima volta ingredienti e strumenti sono sparsi nella classe. La seconda volta sono già sul piano di lavoro. La ricetta è la stessa, ma cambia quanto tempo passi a recuperare l’occorrente.
+Questa attività aiuta a capire perché il computer usa memorie diverse. Preparerai la stessa ricetta in due situazioni: prima con ingredienti e strumenti sparsi nella classe, poi con tutto a portata di mano sul piano di lavoro. Cambierà il tempo necessario per recuperare l’occorrente.
 
 #galleria(
   foto("pancake", altezza: 60mm, didascalia: [Pancake pronti da servire.]),
@@ -282,10 +286,10 @@ Immagina di preparare la stessa ricetta due volte. La prima volta ingredienti e 
 
 == Le due esecuzioni
 
-*Solo memoria secondaria.* Gli strumenti e i materiali sono sparsi nella classe. Chi esegue la ricetta deve spostarsi per recuperare l’occorrente. La ricetta va in pausa durante la ricerca degli ingredienti e si accumulano attese.
+*Prima esecuzione: materiali lontani.* Gli ingredienti e gli strumenti sono sparsi nella classe. Ogni volta che serve qualcosa, devi andare a prenderlo e interrompere la preparazione.
 
-*Con memoria centrale.* Gli strumenti e i materiali sono sul piano di lavoro. Chi esegue la ricetta non si sposta e può prendere l’occorrente con una mano. Il lavoro continua anche quando serve un nuovo ingrediente o strumento.
+*Seconda esecuzione: materiali a portata di mano.* Gli ingredienti e gli strumenti sono sul piano di lavoro. Puoi prenderli rapidamente e proseguire con meno interruzioni.
 
-#richiamo[
-  La ricetta rappresenta il *programma*. Gli ingredienti e gli strumenti che servono sono a portata di mano sul piano di lavoro, come *dati e istruzioni nella RAM*. Il magazzino rappresenta la *memoria secondaria*, dove si conserva quello che servirà anche dopo.
+#da-ricordare[Il piano di lavoro e il magazzino][
+  La ricetta rappresenta il programma. Il piano di lavoro è come la RAM: contiene ciò che serve durante l’attività. Il magazzino è come la memoria secondaria: conserva i materiali anche quando non li stiamo usando. Portarli sul piano di lavoro rende più rapido il loro utilizzo.
 ]

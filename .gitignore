@@ -1,5 +1,6 @@
 /dist/
 /tmp/
+/backup/
 .DS_Store
 ._*
 *.tmp
